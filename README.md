@@ -12,10 +12,17 @@ Social Language Disorder (SLD) traits in autism spectrum disorder, characteristi
 
 ---
 
-## Framework
+## Multi-agent Framework
+
+![TPA Multi-agent Framework or Assessing for Social Language Disorder Traits in Autism](./framework_overview.jpg)
 
 ---
 
+## TPA Selector
+
+![The TPA Selector: Proactive Chain-of-Thought Strategy Selection](./framework_tpa.jpg)
+
+---
 ## Dataset
 
 ---
