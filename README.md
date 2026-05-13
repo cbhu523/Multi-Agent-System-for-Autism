@@ -28,7 +28,7 @@ Social Language Disorder (SLD) traits in autism spectrum disorder, characteristi
 The sample dataset is available for download at the following link:  
 [Download Dataset](https://drive.google.com/file/d/1F2o6guOh8REwJCJ9nXpgGZ04LKW-VDbZ/view?usp=sharing)  
 
-Additional data may be added in the future.  
+Additional data may be added in the future.   
 
 ---
 ## Results
@@ -39,6 +39,59 @@ Additional data may be added in the future.
 ## Case Study
 
 ![Case study: Think-Plan-Ask elicitation cycle for patient X (GT: F2, F3, F6).](./case_study_tpa.jpg)
+
+---
+## Requirements
+
+**Python**: 3.9+
+
+Install dependencies:
+
+```bash
+pip install langchain-openai pyautogen numpy sentence-transformers tqdm
+```
+
+**Environment variable** (required before running):
+
+```bash
+export OPENAI_API_KEY="your-key-here"
+```
+
+---
+
+## Running the Pipeline
+
+### Run all five modes (default)
+
+```bash
+python multi_agent_system_autism.py
+```
+
+### Run specific modes
+
+```bash
+python multi_agent_system_autism.py --modes procot proactive standard
+```
+
+### Full CLI options
+
+```
+--modes         Subset of modes to run (default: all five)
+                choices: procot, proactive, standard, random, round_robin
+--max-turns     Maximum dialogue turns per episode (default: 20)
+--no-early-stop Disable early stopping based on belief uncertainty
+--log-dir       Output directory for logs and summaries (default: logs_procot)
+```
+
+Example:
+
+```bash
+python multi_agent_system_autism.py \
+    --modes procot standard \
+    --max-turns 15 \
+    --log-dir my_experiment
+```
+
 ---
 
 ## Citation
